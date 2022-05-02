@@ -1,0 +1,31 @@
+- impresión inicial del problema
+Se trata de un problema combinatorio. No se pueden armar todas las configuraciones posibles y luego elegir la mejor ya que al ser 150 sucursales el numero de 
+combinaciones es exponencial.
+
+- ideas de como lo van a intentar resolver
+Partiendo desde la central se seleccionan los posibles destinos (según capacidad minima y maxima del camion).
+De los posibles destinos se selecciona el mejor (menor distancia)
+Luego en cada iteración (para cada sucursal) se buscan los siguientes destinos posibles (según capacidad minima y maxima del camion. Además debe ser una sucursal
+que no se haya visitado antes).
+De los posibles destinos se selecciona el mejor (menor distancia).
+Al final se muestra el circuito recorrido.
+
+- comentarios sobre los cambios que hagan en el código a medida que intentan mejorar el resultado
+En un primer momento intenté armar todas las combinaciones posibles y luego quedarme con la mejor pero vi que esto es inviable dada la cantidad de sucursales
+
+- comentarios finales
+Analisis:
+Se trata de un problema del viajante ya que no se conoce el orden en que se visitaran las sucursales y el valor del funcional depende del orden en que se visiten.
+
+Objetivo:
+Determinar el orden en que visitar las sucursales para minimizar el costo del viaje (en distancias) en un periodo de tiempo determinado.
+
+Hipótesis y supuestos:
+
+1.- Desde la central se puede visitar cualquier sucursal
+2.- Desde una sucursal se puede visitar cualquier otra sucursal
+3.- Todas las sucursales deben ser visitadas una unica vez
+4.- Se dispone del tiempo para cumplir con el recorrido determinado por el modelo
+5.- Se puede retonar a la central desde cualquier sucursal
+6.- Se toma como ubicación de la sucursal central el (0,0)
+7.- El camion sale desde la central sin dinero
